@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simulador de Crédito Katueté</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+  <div class="container">
+    <h1>Simulador de Crédito Show</h1>
+
+    <label for="costoUnitario">Costo Unitario (Gs):</label>
+    <input type="text" id="costoUnitario" oninput="formatearInputNumerico(this)" />
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="text" id="cantidad" oninput="formatearInputNumerico(this)" />
+
+    <label for="cuotas">Número de Cuotas:</label>
+    <input type="number" id="cuotas" min="1" value="1" />
+
+    <label for="margen">Margen a aplicar (%):</label>
+    <input type="number" id="margen" min="0" value="30" />
+
+    <button onclick="calcularCredito()">Calcular</button>
+  </div>
+
+  <div class="resultado" id="resultado"></div>
+
+  <div class="container2">
+    <h1>Cambio Actual</h1>
+
+    <label for="Cambiodolar">Cambio Actual Dólar:</label>
+    <input type="text" id="Cambiodolar" oninput="formatearInputNumerico(this)">
+
+    <label for="Valordolar">Valor Total en Dólar:</label>
+    <input type="text" id="Valordolar" oninput="formatearInputNumerico(this)">
+
+    <button id="btnCambio">Calcular</button>
+  </div>
+
+  <button onclick="descargarPDF()">Descargar en PDF</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="js/calculo.js"></script>
+</body>
+</html>
