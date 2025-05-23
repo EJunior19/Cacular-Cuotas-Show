@@ -60,12 +60,12 @@ button:hover {
   background-color: #8cc014;
 }
 button{
-  color: #e2cfcf;
+  color: #111010;
   font-size: 20px;
   background-color: #b1f1007c;
 }
 .resultado{
-    color: #b96767;
+    color: #000000;
     text-align: center;
     font-size: 25px;
       padding: 10px;
